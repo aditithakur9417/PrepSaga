@@ -1,0 +1,51 @@
+.sel-pnl-re{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    border: solid 1px #ba4350;
+    border-radius: 16px;
+    padding: 0px !important;
+    min-height: unset;
+
+    .tile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(25% - 0px);
+        height: 64px;
+        position: relative;
+        margin: 16px 0px 16px;
+    }
+
+    .sel-pnl-img-cont {
+        width: auto;
+        min-height: 26px;
+        max-height: 26px;
+    }
+
+    .selection-panel-img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .selection-panel-text{
+        font-size: 12px;
+        color: #2e2d42;
+        font-family: Montserrat-Light !important;
+        padding: 0px 8px;
+        text-align: center;
+        margin-top: 12px;
+        line-height: 16.8px;
+    }
+
+    .bottom-line{
+        width: calc(100% - 16px);
+        height: 1px;
+        background-color: #ba4350;
+        position: absolute;
+        bottom: -16px;
+    }
+}
+
