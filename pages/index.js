@@ -96,7 +96,7 @@ export default function Home({ articles }) {
       <Banner bannersData={bannerData} />
       <Carousel carouselData={carouselData} />
       <ArticleList articles={articles} />
-      <ProductCard productData={productData} />
+      <ProductCard />
       <StatsBlock stats={stats} />
     </div>
   );
