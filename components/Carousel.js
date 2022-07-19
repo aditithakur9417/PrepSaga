@@ -1,23 +1,28 @@
-import React from 'react'
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Banner from './Banner';
 import { config_5 } from "../config/config_5";
 
-const Carousel = ({ carouselData }) => {
+// import carouselData from "./homepage.json";
+import styles from "./Carousel.module.scss";
+
+// const bannerData = carouselData.api_homeRevamp[1].list;
+
+const Carousel = ({carouselData}) => {
   const settings = {
     dots: true,
     autoplay: true,
     arrows: false,
     adaptiveHeight: true,
-    className: 'w-full',
+    className: "w-full",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
-  console.log("inside component", carouselData)
+  
   if (carouselData.list.length === 1) {
     return <Banner bannersData={carouselData.list[0]} />
   }

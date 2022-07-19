@@ -17,7 +17,7 @@ const Nav = () => {
         </li>
       </ul>
     </nav>
-    <div className="bg-red-500 text-white text-right w-full h-8 lh-5"><div className="text-right"><ul><li className="inline-block p-1">Quickly Go To:</li><li className="inline-block p-1 hover:underline"><a href="/birthday-gifts">Birthday Gifts</a></li><li className="inline-block p-1 hover:underline"><a href="/sweets">Sweets</a></li><li className="inline-block p-1 hover:underline"><a href="/corporate-gifts">Bulk/Corporate Gifts</a></li></ul></div></div>
+
     </>
   )
 }

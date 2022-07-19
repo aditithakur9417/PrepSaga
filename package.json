@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^11.1.2",
+    "@fontsource/montserrat": "^4.5.11",
+    "next": "^11.1.4",
     "next-redux-wrapper": "^7.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

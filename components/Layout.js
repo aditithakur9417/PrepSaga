@@ -2,6 +2,7 @@ import Nav from './Nav'
 import Meta from './Meta'
 import Header from './Header'
 import styles from '../styles/Layout.module.css'
+import SelectionPanel from '../components/selectionPanel/SelectionPanel'
 
 const Layout = ({ children }) => {
   return (
@@ -10,7 +11,7 @@ const Layout = ({ children }) => {
       <Nav />
       <div className={styles.container}>
         <main className={styles.main}>
-          <Header />
+       
           {children}
         </main>
       </div>
