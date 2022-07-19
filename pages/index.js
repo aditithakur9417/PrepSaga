@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import Carousel from "../components/Carousel";
 import ProductCard from "../components/ProductCard";
 import StatsBlock from "../components/StatsBlock";
-import SelectionPanel from '../components/selectionPanel/SelectionPanel'
+import SelectionPanel from "../components/selectionPanel/SelectionPanel";
 import { useDispatch } from "react-redux";
 import { loadData } from "../actions";
 import { useEffect } from "react";
@@ -99,20 +99,15 @@ export default function Home({ articles }) {
   return (
     <div>
       {homeData.api_homeRevamp.map((el) => {
-        if(el.type === "banners") {
+        if (el.type === "banners") {
           return <Carousel carouselData={el} />;
-        } 
-        else if(el.type === "product_list") {
+        } else if (el.type === "product_list") {
           return <ProductCard />;
-        } 
+        } else if (el.type === "tiles") {
+          return <SelectionPanel panelData={el} />;
+        }
       })}
 
-{homeData.api_homeRevamp.map((el) => {
-        if(el.type === "tiles") {
-          return <SelectionPanel panelData={el} />;
-        } 
-      })}
-   
       <ArticleList articles={articles} />
       <Banner bannersData={bannerData} />
       <StatsBlock stats={stats} />
@@ -137,4 +132,3 @@ export async function getServerSideProps(context) {
 
 //   return {
 //
-
