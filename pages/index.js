@@ -7,6 +7,9 @@ import StatsBlock from "../components/StatsBlock";
 import { useDispatch } from "react-redux";
 import { loadData } from "../actions";
 import { useEffect } from "react";
+import { config_5 } from "../config/config_5";
+import { homeData } from "../data/homeData";
+
 const bannerData = {
   catId: 1235,
   title: "Same Day Delivery",
@@ -85,6 +88,10 @@ const productData = {
   numberOfReviewers: "(263)",
 };
 
+// console.log("server --- >> ", server);
+// console.log("server --- >> ", config_5);
+// console.log("server --- >> ", homeData);
+
 export default function Home({ articles }) {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -93,10 +100,25 @@ export default function Home({ articles }) {
   }, []);
   return (
     <div>
-      <Banner bannersData={bannerData} />
-      <Carousel carouselData={carouselData} />
+      {homeData.api_homeRevamp.filter((el) => {
+        if(el.type === "banners") {
+          return <Carousel carouselData={el} />;
+        } 
+        else if(el.type === "product_list") {
+          return <ProductCard />;
+        } 
+        {/* return el.type === "banners" && <Carousel carouselData={el} />;
+        return el.type === "product_list" && <ProductCard />; */}
+        {
+          /* if(el.type === "banners"){
+        console.log("el -->>> ",el);
+        return <Carousel carouselData={el} />;
+      } */
+        }
+      })}
+        
       <ArticleList articles={articles} />
-      <ProductCard />
+      <Banner bannersData={bannerData} />
       <StatsBlock stats={stats} />
     </div>
   );
