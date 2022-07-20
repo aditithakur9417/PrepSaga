@@ -1,13 +1,11 @@
 import React from "react";
-import selectionBarRecords from "../homepage.json";
-import styles from './selectionPanel.module.css'
+import styles from '../../styles/Mobile/selectionPanel.module.css';
 import "@fontsource/montserrat";
 
 
 const SelectionPanel = ({panelData}) => {
    
 
-console.log(panelData)
   return (
     <div>
 
@@ -15,9 +13,12 @@ console.log(panelData)
 <section className={styles.selectionPanel} >
             <div className={styles.widgetArrangement}>
 
-        {panelData.list?.map((data) => (
+        {panelData.list?.map((data,i) => (
             
              <a className={styles.tile8} href={data.url} >
+
+              {i<4?<div className={styles.bottomline}></div>:''}
+
              <img className={styles.selectionPanelImage} src={"https://cdn.igp.com/assets/svg-icons/"+data.imageURL}/>
              <span className={styles.selectionPanelText}>{data.title}</span>
          </a>
