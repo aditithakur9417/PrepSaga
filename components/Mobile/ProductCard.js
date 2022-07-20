@@ -1,4 +1,4 @@
-import ProductCardStyles from "../styles/ProductCard.module.css";
+import ProductCardStyles from "../../styles/Mobile/ProductCard.module.css";
 
 /**
  *

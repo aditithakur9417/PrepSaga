@@ -1,0 +1,11 @@
+.bannerCont{
+    height: 70vw;
+    margin: 24px 0px 40px;
+}
+
+.bannerImg{
+    width: 100vw;
+    height: calc(70vw + 0px);
+}
+    
+    

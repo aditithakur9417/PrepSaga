@@ -3,12 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Banner from './Banner';
-import { config_5 } from "../config/config_5";
-
-// import carouselData from "./homepage.json";
-import styles from "./Carousel.module.scss";
-
-// const bannerData = carouselData.api_homeRevamp[1].list;
+import { config_5 } from "../../config/config_5";
+import styles from '../../styles/Mobile/banners.module.css';
 
 const Carousel = ({carouselData}) => {
   const settings = {
@@ -27,9 +23,11 @@ const Carousel = ({carouselData}) => {
     return <Banner bannersData={carouselData.list[0]} />
   }
   return (
-    <Slider {...settings} className="md:w-full py-5 container md:container md:mx-auto">
+    <Slider {...settings} className={styles.bannerCont}>
       {carouselData.list?.map((data) => (
-        <img src={config_5.cdn.assetsBaseURL+"f_auto,q_auto,t_pnopt30prodlp/banners/"+data.imageURL} key={data.catId} className="w-full max-h-60 object-center md:h-full md:w-full md:max-h-96 md:object-center md:rounded-xl" />
+      
+          <img src={config_5.cdn.assetsBaseURL+"f_auto,q_auto,t_pnopt30prodlp/banners/"+data.imageURL} key={data.catId} className={styles.bannerImg} />
+    
       ))}
     </Slider>
   )
