@@ -1,0 +1,72 @@
+.container {
+    padding: 0 16px;
+}
+
+
+.categoriesList {
+    border-radius: 16px;
+    border: solid 1px #cbd5e1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: calc(100vw - 32px);
+    height: calc(55vw - 17.6px);
+    margin-top: 20px;
+    
+   
+}
+
+
+.subCategoriesList {
+    overflow: hidden;
+    margin-top: 4px;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+    padding: 8px 0px 8px 8px;
+}
+.subCategoriesListRt {
+    overflow: hidden;
+    margin-top: 4px;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+    padding: 8px 0px 8px 16px;
+}
+
+/* background: #f2f2f2 url(https://cdn.igp.com/image/upload/assets/icons/loader-icon.png) no-repeat center center; */
+
+.categoryImg {
+    width: 55%;
+    height: 100%;
+    padding: 8px;
+    z-index: 1;
+    border-radius: 16px;
+}
+
+.subCategoriesLinks {
+    font-size: 14px;
+    color: #94a3b8;
+    font-family: Montserrat-Light!important;
+    min-height: 21px;
+    margin: 4px 0;
+}
+.subCategorieHead {
+    font-size: 18px;
+    color: #2e2d42;
+    font-family: 'PT Serif'!important;
+    letter-spacing: .36px;
+    max-height: 27px;
+    min-height: 27px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

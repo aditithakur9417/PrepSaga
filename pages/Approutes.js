@@ -3,6 +3,7 @@ import Carousel from "../components/Mobile/Carousel";
 import ProductCard from "../components/Mobile/ProductCard";
 import StatsBlock from "../components/Mobile/StatsBlock";
 import SelectionPanel from "../components/Mobile/selectionPanel";
+import Categories from "../components/Mobile/Categories";
 import { homeData } from "../data/homeData";
 
 const bannerData = {
@@ -37,7 +38,6 @@ const stats = [
 ];
 
 export default function Approutes() {
-
   return (
     <div>
       {homeData.api_homeRevamp.map((el) => {
@@ -47,6 +47,8 @@ export default function Approutes() {
           return <ProductCard />;
         } else if (el.type === "tiles") {
           return <SelectionPanel panelData={el} />;
+        } else if (el.type === "categories") {
+          return <Categories categoriesData={el} />;
         }
       })}
 
