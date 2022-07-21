@@ -3,6 +3,7 @@ import Carousel from "../components/Mobile/Carousel";
 import ProductCardTemplate from "../components/Mobile/ProductTemplate";
 import StatsBlock from "../components/Mobile/StatsBlock";
 import SelectionPanel from "../components/Mobile/selectionPanel";
+import Categories from "../components/Mobile/Categories";
 import LensesWidget from "../components/Mobile/LensesWidget";
 import Collection from "../components/Mobile/Collection";
 import { homeData } from "../data/homeData";
@@ -39,7 +40,6 @@ const stats = [
 ];
 
 export default function Approutes() {
-
   const homepageWidgets = homeData.api_homeRevamp.map((widget) => {
     switch (widget.type) {
       case "banners":
@@ -49,16 +49,18 @@ export default function Approutes() {
       case "lenses":
         return <LensesWidget key={widget.id} LensesWidgetData={widget} />;
       case "product_list":
-        return <ProductCardTemplate key={widget.id} data={widget}/>;
+        return <ProductCardTemplate key={widget.id} data={widget} />;
       case "collections":
         return <Collection key={widget.id} collectionData={widget} />;
+      case "categories":
+        return <Categories key={widget.id} categoriesData={widget} />;
 
       default:
         console.log("Component for " + widget.type + " widget not rendered.");
         break;
     }
   });
- 
+
   return (
     <>
       {homepageWidgets}
