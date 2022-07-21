@@ -4,6 +4,7 @@ import ProductCard from "../components/Mobile/ProductCard";
 import StatsBlock from "../components/Mobile/StatsBlock";
 import SelectionPanel from "../components/Mobile/selectionPanel";
 import LensesWidget from "../components/Mobile/LensesWidget";
+import RakhiCollection from "../components/Mobile/RakhiCollection";
 import { homeData } from "../data/homeData";
 
 const bannerData = {
@@ -48,6 +49,8 @@ export default function Approutes() {
         return <LensesWidget key={widget.id} LensesWidgetData={widget} />;
       case "product_list":
         return <ProductCard key={widget.id} />;
+      case "collections":
+        return <RakhiCollection key={widget.id} collectionData={widget} />;
 
       default:
         console.log("Component for " + widget.type + " widget not rendered.");
