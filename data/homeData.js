@@ -160,7 +160,7 @@ export const homeData = {
       vertical: false,
       viewAll: "View All",
       subTitle: "",
-      style: "vertical",
+      style: "horizontal",
       flagUser: 0,
       list: [
         {
@@ -294,7 +294,7 @@ export const homeData = {
       vertical: false,
       viewAll: "View All",
       subTitle: "",
-      style: "horizontal",
+      style: "vertical",
       flagUser: 0,
       list: [
         {
