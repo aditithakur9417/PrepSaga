@@ -37,21 +37,26 @@ const stats = [
 ];
 
 export default function Webroutes() {
+  const homepageWidgets = homeData.api_homeRevamp.map((widget) => {
+    switch (widget.type) {
+      case "banners":
+        return <Carousel key={widget.id} carouselData={widget} />;
+      case "tiles":
+        return <SelectionPanel key={widget.id} panelData={widget} />;
+      case "product_list":
+        return <ProductCard key={widget.id} />;
+
+      default:
+        console.log("Component for " + widget.type + " widget not rendered.");
+        break;
+    }
+  });
 
   return (
-    <div>
-      {homeData.api_homeRevamp.map((el) => {
-        if (el.type === "banners") {
-          return <Carousel carouselData={el} />;
-        } else if (el.type === "product_list") {
-          return <ProductCard />;
-        } else if (el.type === "tiles") {
-          return <SelectionPanel panelData={el} />;
-        }
-      })}
-
+    <>
+      {homepageWidgets}
       <Banner bannersData={bannerData} />
       <StatsBlock stats={stats} />
-    </div>
+    </>
   );
 }

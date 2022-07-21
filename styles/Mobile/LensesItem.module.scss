@@ -1,0 +1,54 @@
+.lenseBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lenseImg{
+    max-width: 23.2vw;
+    height: 23.2vw;
+    border-radius: 50%;
+}
+
+.lenseText{
+    margin-top: 12px;
+    font-size: 14px;
+    font-family: Montserrat-Light !important;
+    color: #49586e;
+    text-align: center;
+}
+
+.lenseHorizontal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-left: 16px;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .lenseBox{
+        margin-left: 28px;
+        &:first-of-type{
+            margin-left: 0px;
+        }
+        &:last-of-type{
+            padding-right: 16px;
+        }
+    }
+}
+
+.lenseVertical{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+
+    .lenseBox{
+        margin-top: 16px;
+        width: calc(33.33vw);
+    }  
+}

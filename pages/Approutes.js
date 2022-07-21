@@ -3,6 +3,7 @@ import Carousel from "../components/Mobile/Carousel";
 import ProductCard from "../components/Mobile/ProductCard";
 import StatsBlock from "../components/Mobile/StatsBlock";
 import SelectionPanel from "../components/Mobile/selectionPanel";
+import LensesWidget from "../components/Mobile/LensesWidget";
 import RakhiCollection from "../components/Mobile/RakhiCollection";
 import { homeData } from "../data/homeData";
 
@@ -38,24 +39,30 @@ const stats = [
 ];
 
 export default function Approutes() {
+  const homepageWidgets = homeData.api_homeRevamp.map((widget) => {
+    switch (widget.type) {
+      case "banners":
+        return <Carousel key={widget.id} carouselData={widget} />;
+      case "tiles":
+        return <SelectionPanel key={widget.id} panelData={widget} />;
+      case "lenses":
+        return <LensesWidget key={widget.id} LensesWidgetData={widget} />;
+      case "product_list":
+        return <ProductCard key={widget.id} />;
+      case "collections":
+        return <RakhiCollection key={widget.id} collectionData={widget} />;
+
+      default:
+        console.log("Component for " + widget.type + " widget not rendered.");
+        break;
+    }
+  });
 
   return (
-    <div>
-      {homeData.api_homeRevamp.map((el) => {
-        if (el.type === "banners") {
-          return <Carousel carouselData={el} />;
-        } else if (el.type === "product_list") {
-          return <ProductCard />;
-        } else if (el.type === "tiles") {
-          return <SelectionPanel panelData={el} />;
-        }
-        else if (el.title === "Rakhi Collection") {
-          return <RakhiCollection collectionData={el} />;
-        }
-      })}
-
+    <>
+      {homepageWidgets}
       <Banner bannersData={bannerData} />
       <StatsBlock stats={stats} />
-    </div>
+    </>
   );
 }
