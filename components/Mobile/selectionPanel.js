@@ -8,7 +8,7 @@ const SelectionPanel = ({ panelData }) => {
       <section className={styles.selectionPanel}>
         <div className={styles.widgetArrangement}>
           {panelData.list?.map((data, i) => (
-            <a className={styles.tile8} href={data.url}>
+            <a className={styles.tile8} href={data.url} key={i}>
               {/* {console.log(`value of i is ${i}`)} */}
               {i < 4 ? <div className={styles.bottomline}></div> : ""}
 
