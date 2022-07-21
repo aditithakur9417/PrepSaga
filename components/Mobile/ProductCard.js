@@ -1,61 +1,49 @@
-import ProductCardStyles from "../../styles/Mobile/ProductCard.module.css";
+import styles from "../../styles/Mobile/ProductCard.module.css";
+import { config_5 } from "../../config/config_5";
 
-/**
- *
- * Returns banner component
- *
- * @param {object} productData object containing banner data
- * @returns ProductCard component
- *
- */
+const ProductCard = ({ product }) => {
 
-const ProductCard = ({ productData }) => {
+  console.log(config_5.cdn.productsURL + config_5.cdn.productsURLTransformationMNew + config_5.cdn.productsURLFolder1 + product.image)
+
   return (
-    <div className="rounded-xl w-max overflow-hidden border-2 border-slate-300 cursor-pointer relative">
-      <div className="rounded-bl-2xl absolute -top-px -right-px w-8 h-8 bg-white opacity-75 flex justify-center items-center">
-        <img
-          src="https://cdn.igp.com/image/upload/v1641305750/assets/svg-icons/Heart_icon-stroke.svg"
-          className="h-4"
-        ></img>
-      </div>
-      <img src={productData.image} alt={productData.alt} />
-      <p className="text-sm font-medium mx-2 mt-2">{productData.name}</p>
-      <div className="mx-2 flex align-middle mt-2">
-        <span className="text-base font-bold">
-          {productData.discountedPrice}
-        </span>
-        <span
-          className={`relative text-base font-bold ml-1 text-gray-600 ${ProductCardStyles.strike}`}
-        >
-          {productData.originalPrice}
-        </span>
-        <div className="inline-block text-xs py-1 px-2 border border-blue-600 text-blue-600 ml-2 ">
-          14% OFF
+    <div className={styles.productCard}>
+
+        <div className={styles.shortlist}>
+          <img src="https://cdn.igp.com/image/upload/v1641305750/assets/svg-icons/Heart_icon-stroke.svg" className="h-4" />
         </div>
-      </div>
-      <div className="flex text-xs m-2">
-        <span className="mr-1">{productData.rating}</span>
-        <img
-          className="mr-1"
-          src="https://cdn.igp.com/raw/upload/assets/svg-icons/full-star.svg"
-        />
-        <span>{productData.numberOfReviewers}</span>
-      </div>
+
+        <a href={'/'+product.url}>
+            <img className={styles.image} src={config_5.cdn.productsURL + config_5.cdn.productsURLTransformationMNew + config_5.cdn.productsURLFolder1 + product.image} alt={product.img_alt_text} />
+        </a>
+
+        <div className={styles.productInfo}>
+
+          <span className={styles.productName}>{product.name}</span>
+
+          <div className={styles.productInfoRow}>
+
+            <span className={styles.productPrice}>{product.price.dprice_inr}</span>
+            
+            <span className={styles.discountedPrice}>{product.price.mrp_inr}</span>
+            
+            <span className={styles.discount}>{product.dprice_inr}% OFF</span>
+
+          </div>
+
+          <div className={styles.productInfoRow}>
+
+            <span className={styles.rating}>{product.rating}</span>
+
+            <img className={styles.fullstar} src="https://cdn.igp.com/raw/upload/assets/svg-icons/full-star.svg" />
+
+            <span className={styles.reviews}>({product.review_count})</span>
+
+          </div>
+
+        </div>
+
     </div>
   );
-};
-
-ProductCard.defaultProps = {
-  productData: {
-    image:
-      "https://cdn.igp.com/f_auto,q_auto,t_pnopt6prodlp/products/p-delicious-kaju-katli-500-gm--101059-m.jpg",
-    alt: "Kaju Katli",
-    name: "Delicious Kaju Katli (500 gm)",
-    originalPrice: "₹ 695",
-    discountedPrice: "₹ 595",
-    rating: "4.5",
-    numberOfReviewers: "(263)",
-  },
 };
 
 export default ProductCard;
