@@ -1,0 +1,141 @@
+.collectionTiles {
+	.textBox {
+		box-sizing: border-box;
+		margin: 15px;
+
+		.heading {
+			font-size: 24px;
+			font-family: 'PT Serif' !important;
+			color: #2e2d42;
+			margin: 0;
+			line-height: 31px;
+			letter-spacing: .48px;
+			cursor: pointer;
+		}
+
+		.subTitle {
+			font-size: 16px;
+			font-family: Montserrat-Light !important;
+			line-height: 22px;
+			font-style: normal;
+			color: #9796a1;
+			text-align: left;
+			margin-top: -2px;
+		}
+	}
+
+	.sixBlocks {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+		margin: 15px;
+	}
+
+	.flexColumn {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.tileContainer {
+		position: absolute;
+		bottom: 0px;
+		display: flex;
+		align-items: center;
+		width: calc(100% - 0px);
+		height: 39px;
+		// z-index: 1;
+		justify-content: center;
+		background: #fff;
+
+		.tileName {
+			font-family: 'PT Serif' !important;
+			font-size: 14px;
+			color: #49586E;
+		}
+
+		.tile-line {
+			border-bottom: solid 1px #fff;
+			height: 1px;
+			margin-left: 12px;
+			display: flex;
+			flex: 1;
+		}
+	}
+
+	.squareTile10 {
+		border-radius: 16px;
+		border: solid 1px #CBD5E1;
+		overflow: hidden;
+		position: relative;
+		width: calc(50vw - 24px);
+		height: calc(50vw + 5px);
+
+
+		.imgResponsive {
+			height: calc(50vw - 26px);
+		}
+	}
+
+	.squareTile15 {
+		border-radius: 16px;
+		border: solid 1px #CBD5E1;
+		overflow: hidden;
+		position: relative;
+		width: calc(50vw - 24px);
+		height: calc(75vw - 5px);
+
+		.imgResponsive {
+			height: calc(75vw - 38px);
+		}
+	}
+
+	.squareTile20 {
+		border-radius: 16px;
+		border: solid 1px #CBD5E1;
+		overflow: hidden;
+		position: relative;
+		width: calc(50vw - 24px);
+		height: calc(100vw - 17px);
+
+		.imgResponsive {
+			height: calc(100vw - 50px);
+		}
+	}
+
+	.square-tile-2-5 {
+		border-radius: 16px;
+		border: solid 1px #CBD5E1;
+		overflow: hidden;
+		position: relative;
+		width: calc(50vw - 24px);
+		height: calc(125vw - 29px);
+
+		.imgResponsive {
+			height: calc(125vw - 62px);
+		}
+	}
+
+	.horizontal-tile {
+		border-radius: 16px;
+		overflow: hidden;
+		position: relative;
+		width: calc(100vw - 32px);
+		height: calc(50vw - 24px);
+	}
+
+	.imgResponsive {
+		border-radius: 12px 12px 0px 0px;
+	}
+	.fiveBlocks{
+		display:flex;
+		flex-direction:column;
+		gap: 16px;
+		margin: 15px;
+	}
+	.flexRow {
+		display:flex;
+		flex-direction:row;	
+		gap: 16px;
+	}
+
+}
