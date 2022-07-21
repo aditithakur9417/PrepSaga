@@ -1,0 +1,52 @@
+.selectionPanel{
+  
+  margin-top: 16px;
+  min-height: initial;
+  padding: 0px 16px;
+  }
+  .widgetArrangement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    border: solid 1px #ba4350;
+    border-radius: 16px;
+    min-height: unset;
+  }
+  
+  .widgetArrangement .tile8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(25% - 0px);
+    height: 64px;    
+    border-left: solid 1px #ba4350;
+    margin: 16px 0px 16px;
+    position: relative;
+  }
+  .tile8:nth-child(4n+1){
+    border-left: none !important;
+  }
+  .selectionPanelImage{
+    width: 48px;
+    position: relative;
+    height: 32px;
+  }
+
+  .selectionPanelText{
+    font-size: 12px;
+    color: #2e2d42;
+    font-family: Montserrat-Light!important;
+    padding: 0 8px;
+    text-align: center;
+    margin-top: 12px;
+    line-height: 16.8px;
+  }
+
+  .bottomline{
+    width: calc(100% - 16px);
+    height: 1px;
+    background-color: #ba4350;
+    position: absolute;
+    bottom: -16px;
+  }
