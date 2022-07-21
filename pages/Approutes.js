@@ -3,6 +3,7 @@ import Carousel from "../components/Mobile/Carousel";
 import ProductCard from "../components/Mobile/ProductCard";
 import StatsBlock from "../components/Mobile/StatsBlock";
 import SelectionPanel from "../components/Mobile/selectionPanel";
+import RakhiCollection from "../components/Mobile/RakhiCollection";
 import { homeData } from "../data/homeData";
 
 const bannerData = {
@@ -47,6 +48,9 @@ export default function Approutes() {
           return <ProductCard />;
         } else if (el.type === "tiles") {
           return <SelectionPanel panelData={el} />;
+        }
+        else if (el.title === "Rakhi Collection") {
+          return <RakhiCollection collectionData={el} />;
         }
       })}
 
