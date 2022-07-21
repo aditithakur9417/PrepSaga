@@ -7,8 +7,8 @@ const SelectionPanel = ({ panelData }) => {
     <div>
       <section className={styles.selectionPanel}>
         <div className={styles.widgetArrangement}>
-          {panelData.list?.map((data) => (
-            <a className={styles.tile8} href={data.url}>
+          {panelData.list?.map((data,i) => (
+            <a className={styles.tile8} href={data.url} key={i}>
               <img
                 className={styles.selectionPanelImage}
                 src={"https://cdn.igp.com/assets/svg-icons/" + data.imageURL}
