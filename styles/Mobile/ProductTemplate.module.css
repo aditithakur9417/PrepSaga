@@ -1,0 +1,7 @@
+.vertical{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 0px 4px;
+    justify-content: space-around;
+}

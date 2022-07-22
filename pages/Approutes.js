@@ -1,10 +1,12 @@
 import Banner from "../components/Mobile/Banner";
 import Carousel from "../components/Mobile/Carousel";
-import ProductCard from "../components/Mobile/ProductCard";
+import ProductCardTemplate from "../components/Mobile/ProductTemplate";
 import StatsBlock from "../components/Mobile/StatsBlock";
-import SelectionPanel from "../components/Mobile/selectionPanel";
 import LensesWidget from "../components/Mobile/LensesWidget";
-import RakhiCollection from "../components/Mobile/RakhiCollection";
+import Collection from "../components/Mobile/Collection";
+import SelectionPanel from "../components/Mobile/SelectionPanel";
+import Categories from "../components/Mobile/Categories";
+import Frames from "../components/Mobile/Frames";
 import { homeData } from "../data/homeData";
 
 const bannerData = {
@@ -48,9 +50,13 @@ export default function Approutes() {
       case "lenses":
         return <LensesWidget key={widget.id} LensesWidgetData={widget} />;
       case "product_list":
-        return <ProductCard key={widget.id} />;
+        return <ProductCardTemplate key={widget.id} data={widget} />;
       case "collections":
-        return <RakhiCollection key={widget.id} collectionData={widget} />;
+        return <Collection key={widget.id} collectionData={widget} />;
+      case "categories":
+        return <Categories key={widget.id} categoriesData={widget} />;
+      case "frames":
+        return <Frames key={widget.id} framesData={widget}/>;
 
       default:
         console.log("Component for " + widget.type + " widget not rendered.");

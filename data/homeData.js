@@ -586,16 +586,7 @@ export const homeData = {
               altTag: "fr-alttag-1",
               viewAll: null,
               list: null,
-            },
-            {
-              index: 6,
-              imageURL: "igp_Birthday_Plants_d_frames_20220309.jpg",
-              title: "Plants",
-              url: "/plants",
-              altTag: "fr-alttag-1",
-              viewAll: null,
-              list: null,
-            },
+            }
           ],
         },
         {

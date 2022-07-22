@@ -2,7 +2,7 @@ import Banner from "../components/Web/Banner";
 import Carousel from "../components/Web/Carousel";
 import ProductCard from "../components/Web/ProductCard";
 import StatsBlock from "../components/Web/StatsBlock";
-import SelectionPanel from "../components/Web/SelectionPanel";
+// import SelectionPanel from "../components/Web/SelectionPanel";
 import { homeData } from "../data/homeData";
 
 const bannerData = {
