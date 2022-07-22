@@ -5,6 +5,7 @@ import StatsBlock from "../components/Mobile/StatsBlock";
 import LensesWidget from "../components/Mobile/LensesWidget";
 import Collection from "../components/Mobile/Collection";
 import SelectionPanel from "../components/Mobile/SelectionPanel";
+import Categories from "../components/Mobile/Categories";
 import Frames from "../components/Mobile/Frames";
 import { homeData } from "../data/homeData";
 
