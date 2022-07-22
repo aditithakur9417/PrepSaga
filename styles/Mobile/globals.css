@@ -14,3 +14,38 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.widgetTileLinkHeader{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 16px;
+}
+.widgetTileLinkHeader.notViewAll{
+  justify-content: flex-start;
+}
+
+.widgetMargin{
+  margin-top: 60px;
+}
+
+.widgetTitleText{
+  font-size: 24px;
+  color: #2e2d42;
+  margin: 0;
+  line-height: 31px;
+  letter-spacing: .48px;
+}
+
+.widgetSubtitleText{
+  font-size: 16px;
+  line-height: 22px;
+  font-style: normal;
+  color: #9796a1;
+}
+
+.widgetTitleLink{
+  font-size: 12px;
+  line-height: 16.8px;
+  color: #9796a1;
+}
