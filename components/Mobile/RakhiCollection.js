@@ -17,12 +17,12 @@ const RakhiCollection = ({collectionData}) => {
 
   {(collectionData.list.length-1)==5 ? 
   <div>
-   <p> 
+
 
    <div className={styles.fiveBlocks}>
    <div className={styles.flexRow} >
-   <div className={styles.flexColumn}>
 
+   <div className={styles.flexColumn}>
    <a className={styles.squareTile20} href={collectionData.list[0].url} >
          <img className={styles.imgResponsive} src={config_5.cdn.bannersURL+collectionData.list[0].imageURL} placeholder=" "/>
          <div className={styles.tileContainer}>
@@ -30,18 +30,44 @@ const RakhiCollection = ({collectionData}) => {
          </div>
        </a>
 
-       <a className={styles.squareTile10} href={collectionData.list[2].url}  >
+       <a className={styles.squareTile10} style={{marginTop:16}} href={collectionData.list[2].url}  >
+         <img className={styles.imgResponsive} src={config_5.cdn.bannersURL+collectionData.list[2].imageURL} placeholder=" "/>
+         <div className={styles.tileContainer}>
+             <span className={styles.tileName}>{collectionData.list[2].title}</span> 
+         </div>
+       </a>
+    </div>
+
+    <div className={styles.flexColumn}>
+    <a className={styles.squareTile10}  href={collectionData.list[2].url}  >
          <img className={styles.imgResponsive} src={config_5.cdn.bannersURL+collectionData.list[2].imageURL} placeholder=" "/>
          <div className={styles.tileContainer}>
              <span className={styles.tileName}>{collectionData.list[2].title}</span> 
          </div>
        </a>
 
-    </div>
-    </div>
+       <a className={styles.squareTile20} style={{marginTop:16}}  href={collectionData.list[3].url} >
+         <img className={styles.imgResponsive} src={config_5.cdn.bannersURL+collectionData.list[3].imageURL}  placeholder=" "/>
+         <div className={styles.tileContainer}>
+             <span className={styles.tileName}>{collectionData.list[3].title}</span> 
+         </div>
+       </a>
     </div>
 
-   </p>
+
+    </div>
+
+    <a className={styles.horizontalTile} style={{marginTop:16}} href={collectionData.list[4].url} >
+    <img className={styles.imgResponsive} src={config_5.cdn.bannersURL+collectionData.list[4].imageURL}  placeholder=" "/>
+         <div className={styles.tileContainer}>
+             <span className={styles.tileName}>{collectionData.list[4].title}</span> 
+    
+            </div>
+          
+        </a>  
+    </div>
+
+   
   </div>
    :
   <div className={styles.sixBlocks}>
