@@ -1,7 +1,8 @@
 import 'tailwindcss/tailwind.css'
 import Layout from '../components/Layout'
 import {wrapper} from '../store';
-// import '../styles/globals.css'
+import '../styles/Mobile/globals.css';
+import '../styles/Web/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (

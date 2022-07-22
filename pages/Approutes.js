@@ -2,9 +2,10 @@ import Banner from "../components/Mobile/Banner";
 import Carousel from "../components/Mobile/Carousel";
 import ProductCardTemplate from "../components/Mobile/ProductTemplate";
 import StatsBlock from "../components/Mobile/StatsBlock";
-import SelectionPanel from "../components/Mobile/selectionPanel";
 import LensesWidget from "../components/Mobile/LensesWidget";
 import Collection from "../components/Mobile/Collection";
+import SelectionPanel from "../components/Mobile/SelectionPanel";
+import Frames from "../components/Mobile/Frames";
 import { homeData } from "../data/homeData";
 
 const bannerData = {
@@ -52,6 +53,8 @@ export default function Approutes() {
         return <ProductCardTemplate key={widget.id} data={widget}/>;
       case "collections":
         return <Collection key={widget.id} collectionData={widget} />;
+      case "frames":
+        return <Frames key={widget.id} framesData={widget}/>;
 
       default:
         console.log("Component for " + widget.type + " widget not rendered.");
