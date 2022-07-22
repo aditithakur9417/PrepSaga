@@ -40,7 +40,6 @@ const stats = [
 ];
 
 export default function Approutes() {
-
   const homepageWidgets = homeData.api_homeRevamp.map((widget) => {
     switch (widget.type) {
       case "banners":
@@ -50,9 +49,11 @@ export default function Approutes() {
       case "lenses":
         return <LensesWidget key={widget.id} LensesWidgetData={widget} />;
       case "product_list":
-        return <ProductCardTemplate key={widget.id} data={widget}/>;
+        return <ProductCardTemplate key={widget.id} data={widget} />;
       case "collections":
         return <Collection key={widget.id} collectionData={widget} />;
+      case "categories":
+        return <Categories key={widget.id} categoriesData={widget} />;
       case "frames":
         return <Frames key={widget.id} framesData={widget}/>;
 
@@ -61,7 +62,7 @@ export default function Approutes() {
         break;
     }
   });
- 
+
   return (
     <>
       {homepageWidgets}
