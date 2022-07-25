@@ -7,7 +7,9 @@ import Collection from "../components/Mobile/Collection";
 import SelectionPanel from "../components/Mobile/SelectionPanel";
 import Categories from "../components/Mobile/Categories";
 import Frames from "../components/Mobile/Frames";
+import Polaroid from "../components/Mobile/Polaroid";
 import { homeData } from "../data/homeData";
+import CountryCity from "../components/Mobile/CountryCity";
 
 const bannerData = {
   catId: 1235,
@@ -57,6 +59,10 @@ export default function Approutes() {
         return <Categories key={widget.id} categoriesData={widget} />;
       case "frames":
         return <Frames key={widget.id} framesData={widget}/>;
+      case "country_city":
+        return <CountryCity key={widget.id} countryData={widget}/>;
+        case "polaroid":
+          return <Polaroid key={widget.id} polaroidData={widget}/>;
 
       default:
         console.log("Component for " + widget.type + " widget not rendered.");
