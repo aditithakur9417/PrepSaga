@@ -1,0 +1,98 @@
+.container{
+    margin: 0 0.8rem;
+    color: #515151;
+    display: flex;
+    flex-direction: column;
+
+    hr{
+        border-top: 3px solid rgb(85, 105, 132);
+        width: 100px;
+    }
+
+    p{
+        line-height: 1.5rem;
+    }
+    .textCenter{
+        text-align: center;
+    }
+
+    .interviewBlock{
+        line-height: 1.5rem;
+        float: left;
+
+        h1{
+          line-height: 2.3rem;
+
+        }
+    }
+.faqBlock{
+  line-height: 1.5rem;
+  float: left;
+  scroll-margin-top: 3.5rem;
+  ol{
+    padding:0 0.9rem;
+        }
+}
+
+    li{
+        margin-bottom:10px
+    }
+.interviewRounds{
+    scroll-margin-top: 4.3rem;
+    ol{
+      padding:0 1.5rem;
+          }
+  }
+  .interviewProcess{
+    scroll-margin-top: 4.3rem;
+    ol{
+      padding:0 1.5rem;
+          }
+  }
+  .about{
+    scroll-margin-top: 4.3rem;
+  }
+
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  
+  
+   #myLinks {
+    display: none;
+  }
+  
+   a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+   a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+//    a:hover {
+//     background-color: #ddd;
+//     color: black;
+//   }
+  
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+}
+.title{
+  margin-bottom:1.5rem
+}

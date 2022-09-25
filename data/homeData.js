@@ -226,14 +226,7 @@ export const homeData = {
       style: "flow",
       flagUser: 0,
       list: [
-        {
-          imageURL: "rakhi_designer_rakhis_igp_d_collections_20220625.png",
-          title: "Designer Rakhis",
-          url: "/rakhi/rakhis",
-          altTag: "coll-alt_tag-3",
-          desktopSortOrder: null,
-          mobileSortOrder: null,
-        },
+  
         {
           imageURL: "rakhi_gifts_worldwide_igp_d_collections_20220625.png",
           title: "Send Worldwide",

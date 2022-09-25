@@ -1,0 +1,77 @@
+.header {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #e6f4ff;
+    padding: 50px;
+
+    .heading {
+        font-size: 6.2vw;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.companyList {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    max-width: 90rem;
+    padding: 0 0.8rem;
+
+    .companyCard {
+        max-width: none;
+        width: 100%;
+        max-height: none;
+        height: auto;
+        margin-bottom: 1.6rem;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+    }
+
+    .cardBanner {
+        display: flex;
+        color: white;
+        padding: 1rem;
+        position: relative;
+        border-radius: 0.8rem;
+        align-items: center;
+
+        .companyLogo {
+
+            margin-right: 1.5rem;
+            display: flex;
+            padding-bottom: 4px;
+            align-self: end;
+        }
+    }
+
+    .logoContent {
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+
+    .rightArrow {
+        position: absolute;
+        right: 2rem;
+        cursor: pointer;
+    }
+}
+
+.headLine{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.8rem;
+}
+.description{
+    font-size: 1rem;
+    padding: 0.8rem;
+
+    p{
+        margin: 0;
+    }
+}
