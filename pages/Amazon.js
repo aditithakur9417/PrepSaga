@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Mobile/Google.module.scss";
 import { FaBars } from "react-icons/Fa";
 
-import Topnav from "../components/Mobile/TopNav";
+import Topnav from "../components/Mobile/Topnav";
 
 const Amazon = () => {
   return (
