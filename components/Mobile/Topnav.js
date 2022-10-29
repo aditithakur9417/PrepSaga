@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { FaBars } from "react-icons/Fa";
+import { FaBars } from "react-icons/fa";
 import styles from "../styles/Mobile/Topnav.module.scss";
 
 const Topnav = () => {
