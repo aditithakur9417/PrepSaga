@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/Mobile/Google.module.scss";
-import { FaBars } from "react-icons/Fa";
+
 
 import Topnav from "../components/Mobile/Topnav";
 
