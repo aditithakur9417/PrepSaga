@@ -1,39 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
-import styles from "../styles/Mobile/GooglesGuide.module.scss";
+import styles from "../styles/Mobile/Google.module.scss";
 import { FaBars } from "react-icons/Fa";
 
-const GoogleGuide = () => {
-  const [navbar, setnavbar] = useState("none");
-  const toggleNavbar = () => {
-    if (navbar == "none") {
-      setnavbar("block");
-    } else setnavbar("none");
+import Topnav from "../components/Mobile/TopNav";
 
-    console.log(document.querySelector("body").scrollTop);
-  };
-
+const Google = () => {
   return (
     <div class="parent">
-      <div className={styles.topnav}>
-        <a href="#home" className={styles.active}>
-          Logo
-        </a>
-        <div id="myLinks" style={{ display: navbar }} onClick={toggleNavbar}>
-          <a href="#about">About</a>
-          <a href="#interviewProcess">Interview Process</a>
-          <a href="#interviewRounds">Interview Rounds</a>
-          <a href="#faqBlock">FAQ</a>
-        </div>
-        <a
-          href="javascript:void(0);"
-          className={styles.icon}
-          onClick={toggleNavbar}
-        >
-          <FaBars />
-        </a>
-      </div>
+      <Topnav />
 
       <div className={styles.container}>
         <div id="about" className={styles.about}>
@@ -137,7 +113,16 @@ const GoogleGuide = () => {
             </ol>
           </div>
         </div>
-
+        <a
+          href="/Google/GoogleQuestions"
+          className={styles.button7}
+          style={{ backgroundColor: "#a24dcc", display: "flex" }}
+        >
+          <span className={styles.button}>Q</span>
+          <div className={styles.flexCenter}>
+            Amazon High Priority Questions
+          </div>
+        </a>
         <div className={styles.faqBlock} id="faqBlock">
           <div className={styles.title}>
             <h1 className={styles.textCenter}>FAQ</h1>
@@ -152,7 +137,7 @@ const GoogleGuide = () => {
               <div>
                 6-7 (Telephonic Interviews - 2 Rounds, DS &amp; Algo Interviews
                 - 3 or 4 Rounds, Googliness Interviews -1 Round).
-                <a href="#interview-process">Find out More.</a>
+                <a href="#interviewProcess">Find out More.</a>
               </div>
             </li>
             <li>
@@ -239,4 +224,4 @@ const GoogleGuide = () => {
     </div>
   );
 };
-export default GoogleGuide;
+export default Google;

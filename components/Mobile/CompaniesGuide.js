@@ -32,7 +32,7 @@ const CompaniesGuide = () => {
               <div style={{ fontSize: "1.2rem" }}>Google</div>
               <div>Interview Structure</div>
             </div>
-            <Link href="/GoogleGuide">
+            <Link href="/Google">
               <div className={styles.rightArrow}>
                 <MdArrowForwardIos size={20} />
               </div>

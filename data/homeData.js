@@ -1,6 +1,136 @@
 export const homeData = {
   api_homeRevamp: [
     {
+      id: 5,
+      type: "GoogleQuestions",
+      title: "Google Coding Questions",
+      backgroundImage: "",
+      url: "",
+      lazyLoad: false,
+      vertical: false,
+      viewAll: "View All",
+      subTitle: "",
+      style: "",
+      flagUser: 0,
+      list: [
+        {
+          title:"Gas Station",
+          description:"Given two integer arrays A and B of size N. There are N gas stations along a circular route, where the amount of gas at station i...",
+          url: "/Google/ChatEngine",
+        },
+        {
+          title:"Majority Element",
+          description:"Given an array of size n, find the majority element. The majority element is the element that appears more than floor(n/2) times. Yo...",
+          url: "/",
+        },
+        {
+          title:"Max Rectangle in Binary Matrix",
+          description:"Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing all ones and return its area. Bonus if you can solve it in O(n...",
+          url: "/",
+        },
+        {
+          title:"Distinct Subsequences",
+          description:"Given two sequences A, B, count number of unique ways in sequence A, to form a subsequence that is identical to the sequence B. Subsequence : A subseq...",
+          url: "/",
+        },
+        {
+          title:"Palindrome Partitioning II",
+          description:"Given a string A, partition A such that every substring of the partition is a palindrome. Return the minimum cuts needed for a palindrome partitioning...",
+          url: "/",
+        },
+        {
+          title:"Min Jumps Array",
+          description:"Given an array of non-negative integers, A, of length N, you are initially positioned at the first index of the array. Each element in the array repre...",
+          url: "/",
+        },
+        {
+          title:"Edit Distance",
+          description:"Given two strings A and B, find the minimum number of steps required to convert A to B. (each operation is counted as 1 step)You have the following ...",
+          url: "/",
+        },
+        {
+          title:"Word Break",
+          description:"Given a string A and a dictionary of words B, determine if A can be segmented into a space-separated sequence of one or more dictionary words. Input F...",
+          url: "/",
+        },
+        {
+          title:"Regular Expression II",
+          description:"Implement regular expression matching with support for '.' and '*'. '.' Matches any single character. '*' Matches zero or more of the preceding elemen...",
+          url: "/",
+        },
+        {
+          title:"Interleaving Strings",
+          description:"Given A, B, C, find whether C is formed by the interleaving of A and B. Input Format:* The first argument of input contains a string, A. The second a...",
+          url: "/",
+        },
+      ],
+    },
+    {
+      id: 5,
+      type: "AmazonQuestions",
+      title: "Amazon Coding Questions",
+      backgroundImage: "",
+      url: "",
+      lazyLoad: false,
+      vertical: false,
+      viewAll: "View All",
+      subTitle: "",
+      style: "",
+      flagUser: 0,
+      list: [
+        {
+          title:"Stairs",
+          description:"You are climbing a stair case and it takes A steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you...",
+          url: "/",
+        },
+        {
+          title:"Rotate List",
+          description:"Given a list, rotate the list to the right by k places, where k is non-negative. For example: Given 1->2->3->4->5->NULL and k = 2, ret...",
+          url: "/",
+        },
+        {
+          title:"Distribute Candy",
+          description:"There are N children standing in a line. Each child is assigned a rating value. You are giving candies to these children subjected to the following re...",
+          url: "/",
+        },
+        {
+          title:"Longest Increasing Subsequences",
+          description:"Find the longest increasing subsequence of a given array of integers, A. In other words, find a subsequence of array in which the subsequence’s elemen...",
+          url: "/",
+        },
+        {
+          title:"Max Product Subarray",
+          description:"Find the contiguous subarray within an array (containing at least one number) which has the largest product. Return an integer corresponding to the max...",
+          url: "/",
+        },
+        {
+          title:"Ways to Decode",
+          description:"A message containing letters from A-Z is being encoded to numbers using the following mapping: 'A' -> 1 'B' -> 2 ... 'Z...",
+          url: "/",
+        },
+        {
+          title:"Best Time to Buy and Sell Stocks II",
+          description:"Say you have an array, A, for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum...",
+          url: "/",
+        },
+        {
+          title:"Best Time to Buy and Sell Stocks III",
+          description:"Say you have an array, A, for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum profit. You may co...",
+          url: "/",
+        },
+        {
+          title:"Best Time to Buy and Sell Stocks I",
+          description:"Problem DescriptionSay you have an array, A, for which the ith element is the price of a given stock on day i. If you were only permitted to complete a...",
+          url: "/",
+        },
+        {
+          title:"Interleaving Strings", 
+          description:"Given A, B, C, find whether C is formed by the interleaving of A and B. Input Format:* The first argument of input contains a string, A. The second a...",
+          url: "/",
+        },
+      ],
+    },
+    {
       id: 1,
       type: "tiles",
       title: "",
