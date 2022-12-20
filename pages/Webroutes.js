@@ -1,5 +1,11 @@
-//imports
+import CompaniesGuide from "../components/Web/CompaniesGuide";
+import LanguagesGuide from "../components/Web/LanguagesGuide";
 
 export default function Webroutes() {
-  return <>desktop view imports...</>;
+  return(
+  <>
+    <CompaniesGuide />
+    <LanguagesGuide />
+  </>
+  )
 }

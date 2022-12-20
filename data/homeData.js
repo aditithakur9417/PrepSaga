@@ -1,22 +1,15 @@
 export const homeData = {
   api_homeRevamp: [
     {
-      id: 5,
+      id: 1,
       type: "GoogleQuestions",
       title: "Google Coding Questions",
-      backgroundImage: "",
-      url: "",
-      lazyLoad: false,
-      vertical: false,
-      viewAll: "View All",
-      subTitle: "",
-      style: "",
-      flagUser: 0,
       list: [
         {
           title:"Gas Station",
           description:"Given two integer arrays A and B of size N. There are N gas stations along a circular route, where the amount of gas at station i...",
-          url: "/Google/ChatEngine",
+          url: "/gas_station",
+          content: "<h1>Gas Station</h1><br/> <h3>Problem Description</h3> Given two integer arrays A and B of size N. There are N gas stations along a circular route, where the amount of gas at station i is A[i]. <br/><br/> You have a car with an unlimited gas tank and it costs B[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. <br/><br/> Return the minimum starting gas station's index if you can travel around the circuit once, otherwise return -1. <br/><br/> You can only travel in one direction. i to i+1, i+2, ... n-1, 0, 1, 2.. Completing the circuit means starting at i and ending up at i again."
         },
         {
           title:"Majority Element",
@@ -66,17 +59,9 @@ export const homeData = {
       ],
     },
     {
-      id: 5,
+      id: 2,
       type: "AmazonQuestions",
       title: "Amazon Coding Questions",
-      backgroundImage: "",
-      url: "",
-      lazyLoad: false,
-      vertical: false,
-      viewAll: "View All",
-      subTitle: "",
-      style: "",
-      flagUser: 0,
       list: [
         {
           title:"Stairs",
@@ -130,6 +115,140 @@ export const homeData = {
         },
       ],
     },
+    {
+      id: 3,
+      type: "MicrosoftQuestions",
+      title: "Microsoft Coding Questions",
+      list: [
+        {
+          title:"Regular Expression Match",
+          description: "Implement wildcard pattern matching with support for '?' and '*' for strings A and B. '?' : Matches any single character.'*' : ...",
+          url: "/Google/ChatEngine",
+        },
+        {
+          title:"Edit Distance",
+          description:"Given two strings A and B, find the minimum number of steps required to convert A to B. (each operation is counted as 1 step.) You have the following ...",
+          url: "/",
+        },
+        {
+          title:"Swap List nodes in pairs",
+          description:"Given a linked list, swap every two adjacent nodes and return its head. For example, Given 1->2->3->4, you should return the list as 2->1-...",
+          url: "/",
+        },
+        {
+          title:"Max Product Subarray",
+          description:"Find the contiguous subarray within an array (containing at least one number) which has the largest product. Return an integer corresponding to the max...",
+          url: "/",
+        },
+        {
+          title:"Palindrome Partitioning II",
+          description:"Given a string A, partition A such that every substring of the partition is a palindrome. Return the minimum cuts needed for a palindrome partitioning...",
+          url: "/",
+        },
+        {
+          title:"Max Rectangle in Binary Matrix",
+          description:"Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing all ones and return its area. Bonus if you can solve it in O(n...",
+          url: "/",
+        },
+        {
+          title:"Edit Distance",
+          description:"Given two strings A and B, find the minimum number of steps required to convert A to B. (each operation is counted as 1 step)You have the following ...",
+          url: "/",
+        },
+        {
+          title:"Distribute Canndy",
+          description:"There are N children standing in a line. Each child is assigned a rating value. You are giving candies to these children subjected to the following re...",
+          url: "/",
+        },
+        {
+          title:"Longest Increasing Subsequence",
+          description:"Find the longest increasing subsequence of a given array of integers, A. In other words, find a subsequence of array in which the subsequence’s elemen...",
+          url: "/",
+        },
+        {
+          title:"Gas Station",
+          description:"Given two integer arrays A and B of size N. There are N gas stations along a circular route, where the amount of gas at station i...",
+          url: "/Google/ChatEngine"
+        },
+      ],
+    },
+    {
+      id: 4,
+      type: "AppleQuestions",
+      title: "Apple Coding Questions",
+      list: [
+        {
+          title:"Rotting Oranges",
+          description: "You have been given a grid containing some oranges. Each cell of this grid has one of the three integers values...",
+          url: "/Google/ChatEngine",
+        },
+        {
+          title:"Excel Column Number",
+          description:"You are given a 2-dimensional array/list having N rows and M columns, which is filled with ones(1) and zeroes(0)...",
+          url: "/",
+        },
+        {
+          title:"Break Number",
+          description:"Given a number 'N', you need to find all possible unique ways to represent this number as the sum of positive integers...",
+          url: "/",
+        },
+        {
+          title:"Right View",
+          description:"You have been given a Binary Tree of integers. Your task is to print the Right view of it...",
+          url: "/",
+        },
+        {
+          title:"House Robber II",
+          description:"Mr. X is a professional robber planning to rob houses along a street. Each house has a certain amount of money hidden. All houses along this street are arranged in a circle...",
+          url: "/",
+        },
+        {
+          title:"Spiral Matrix",
+          description:"You are given a 2-D array 'MATRIX' of dimensions N x M, of integers. You need to return the spiral path of the matrix...",
+          url: "/",
+        },
+        
+      ],
+    },
+    {
+      id: 5,
+      type: "Meta(Facebook)Questions",
+      title: "Meta(Facebook) Coding Questions",
+      list: [
+        {
+          title:"Inplace rotate matrix 90 degree",
+          description: "You are given a square matrix of non-negative integers of size 'N x N'. Your task is to rotate that array by 90 degrees in an anti-clockwise direction without using any extra space...",
+          url: "/Google/ChatEngine",
+        },
+        {
+          title:"Excel Column Number",
+          description:"You are given a 2-dimensional array/list having N rows and M columns, which is filled with ones(1) and zeroes(0)...",
+          url: "/",
+        },
+        {
+          title:"Break Number",
+          description:"Given a number 'N', you need to find all possible unique ways to represent this number as the sum of positive integers...",
+          url: "/",
+        },
+        {
+          title:"Right View",
+          description:"You have been given a Binary Tree of integers. Your task is to print the Right view of it...",
+          url: "/",
+        },
+        {
+          title:"House Robber II",
+          description:"Mr. X is a professional robber planning to rob houses along a street. Each house has a certain amount of money hidden. All houses along this street are arranged in a circle...",
+          url: "/",
+        },
+        {
+          title:"Spiral Matrix",
+          description:"You are given a 2-D array 'MATRIX' of dimensions N x M, of integers. You need to return the spiral path of the matrix...",
+          url: "/",
+        },
+        
+      ],
+    },
+  
     {
       id: 1,
       type: "tiles",

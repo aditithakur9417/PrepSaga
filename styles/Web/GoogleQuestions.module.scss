@@ -1,0 +1,66 @@
+.container {
+margin: auto 60px;
+    div {
+      line-height: 1.5rem;
+    }
+  
+    .title {
+      margin-bottom: 1.5rem
+    }
+    hr {
+      border-top: 3px solid rgb(85, 105, 132);
+      width: 100px;
+    }
+  }
+  
+  .problem {
+    padding: 25px;
+    border-color: #b3b3b3;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 4px;
+    margin: 20px;
+    background: #fff;
+  
+    .problemButton {
+      background-color: #75c8d6;
+      color: white;
+      padding: 7px 30px;
+      display: block;
+      float: right;
+  
+      cursor: pointer;
+      border: 1px solid transparent;
+      font-size: 14px;
+    }
+  
+    .problemType {
+      padding-bottom: 0;
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+  
+    .problemDescription {
+      margin: 10px 0px;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+  }
+  
+  .textCenter {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+  
+  .topContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+  }
+  
+  @media only screen and (max-width: 700px){
+    .container{
+      margin: auto 15px;
+    }
+  }

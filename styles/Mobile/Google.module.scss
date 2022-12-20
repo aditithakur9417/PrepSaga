@@ -4,6 +4,9 @@
   display: flex;
   flex-direction: column;
 
+  h1{
+    font-size:2em;
+  }
   hr {
     border-top: 3px solid rgb(85, 105, 132);
     width: 100px;
@@ -33,7 +36,7 @@
     scroll-margin-top: 3.5rem;
 
     ol {
-      padding: 0 0.9rem;
+      padding: 0 1.5rem;
     }
   }
 

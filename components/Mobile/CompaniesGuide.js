@@ -56,9 +56,11 @@ const CompaniesGuide = () => {
               <div>Interview Structure</div>
             </div>
 
-            <div className={styles.rightArrow}>
-              <MdArrowForwardIos size={20} />
-            </div>
+            <Link href="/Amazon">
+              <div className={styles.rightArrow}>
+                <MdArrowForwardIos size={20} />
+              </div>
+            </Link>
           </div>
         </div>
 
