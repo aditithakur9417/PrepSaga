@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from "react";
-import CodeEditorWindow from "./CodeEditorWindow";
+import CodeEditorWindow from "../src/components/CodeEditorWindow";
 import axios from "axios";
-import { classnames } from "../utils/general";
-import { languageOptions } from "../constants/languageOptions";
-import { Scrollbars } from "react-custom-scrollbars";
+import { classnames } from "../src/utils/general";
+import { languageOptions } from "../src/constants/languageOptions";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { defineTheme } from "../lib/defineTheme";
-import useKeyPress from "../hooks/useKeyPress";
+import { defineTheme } from "../src/lib/defineTheme";
+import useKeyPress from "../src/hooks/useKeyPress";
 
-import OutputWindow from "./OutputWindow";
-import CustomInput from "./CustomInput";
-import OutputDetails from "./OutputDetails";
-import ThemeDropdown from "./ThemeDropdown";
-import LanguagesDropdown from "./LanguagesDropdown";
-import styles from "../../styles/Web/Landing.module.scss";
+import OutputWindow from "../src/components/OutputWindow";
+import CustomInput from "../src/components/CustomInput";
+import OutputDetails from "../src/components/OutputDetails";
+import ThemeDropdown from "../src/components/ThemeDropdown";
+import LanguagesDropdown from "../src/components/LanguagesDropdown";
+import styles from "../styles/Web/Compiler.module.scss";
 
-import Question from "./Question";
-import { homeData } from "../../data/homeData";
-import { DefaultFormat } from "../../data/DefaultFormat";
+import Question from "../src/components/Question";
+import { homeData } from "../data/homeData";
+import { DefaultFormat } from "../data/DefaultFormat"
 
 import { useRouter } from "next/router";
-import { ImCross } from "react-icons/im";
+
 var lan;
 
 // const javascriptDefault = `/**
@@ -57,15 +56,14 @@ var lan;
 // console.log(binarySearch(arr, target));
 // `;
 
-const Landing = () => {
+const Compiler = () => {
   const [code, setCode] = useState(DefaultFormat.info[0].syntax);
-
+ 
   const [outputDetails, setOutputDetails] = useState(null);
   const [processing, setProcessing] = useState(null);
   const [theme, setTheme] = useState("cobalt");
   const [language, setLanguage] = useState(languageOptions[0]);
   const [Isanswer, setIsanswer] = useState(false);
-  const [IsOutputDetailsVisible, setIsOutputDetailsVisible] = useState(false);
 
   const enterPress = useKeyPress("Enter");
   const ctrlPress = useKeyPress("Control");
@@ -75,41 +73,18 @@ const Landing = () => {
   var question = array[3];
   var customOutput;
   var input;
-  var title;
   homeData.api_homeRevamp.map((data, i) => {
     if (data.type == "GoogleQuestions") {
       data.list.map((data, i) => {
         if (data.url == `/${question}`) {
           customOutput = data.output;
-          input = data.input;
-          title = data.title;
+          input=data.input;
         }
       });
     }
   });
 
-  useEffect(() => {
-
-    setTimeout(() => {
-      document.querySelector(".monaco-editor").style.padding="20px 0px"
-    }, 200);
-    document.body.style.overflow = "hidden";
-
-    // alert(document.querySelector("div").classList.contains("editorWindow"));
-    if (document.querySelector(".monaco-editor")) {
-      alert("Element exists!");
-      document.querySelector(".monaco-editor").style.padding="20px 0px"
-    }
-
-    // document.getElementsByClassName('monaco-editor').style.paddingTop ="20px"
-    // document.querySelector(".Landing_editorWindow__mgdGX .monaco-editor").style.paddingTop ="20px"
-  }, [1000]);
-  function hideOutputDetails() {
-    if (IsOutputDetailsVisible == true) {
-      setIsOutputDetailsVisible(false);
-    }
-  }
-  var [customInput, setCustomInput] = useState(input);
+ var [customInput, setCustomInput] = useState(input);
   console.log(`output-${customOutput}`);
   var test;
   useEffect(() => {
@@ -129,13 +104,14 @@ const Landing = () => {
   //   setIsanswer(false)
 
   //   DefaultFormat.info.map((data, i) => {
-
+    
   //     if (data.title == language.name) {
-
+  
   //     setCode(data.syntax)
   //     // alert(code)
   //     }
 
+      
   //   });
   // }, [language]);
 
@@ -162,15 +138,10 @@ const Landing = () => {
       }
     }
   };
-
-  function example() {
-    alert(IsOutputDetailsVisible);
-  }
   const handleCompile = () => {
-    customInput = input;
-    hideOutputDetails();
-    setIsOutputDetailsVisible(true);
-
+    alert(input)
+    customInput=input
+    alert(customInput)
     setProcessing(true);
     const formData = {
       language_id: language.id,
@@ -302,7 +273,7 @@ const Landing = () => {
   };
 
   return (
-    <div className={styles.landing}>
+    <div className={styles.Compiler}>
       {/* v-{test} */}
       <ToastContainer
         position="top-right"
@@ -317,100 +288,50 @@ const Landing = () => {
       />
 
       <div className={styles.topBar}></div>
-
+      <div className={styles.topContainer}>
+        <div>
+          <LanguagesDropdown onSelectChange={onSelectChange} />
+        </div>
+        <div>
+          <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
+        </div>
+      </div>
       <div className={styles.container}>
-        <Scrollbars
-          className={styles.questionContainer}
-          universal={true}
-          style={{ height: 750 }}
-          renderTrackVertical={({ style, ...props }) => (
-            <div
-              {...props}
-              style={{
-                ...style,
-                backgroundColor: "black",
-                right: "2px",
-                bottom: "2px",
-                top: "2px",
-                borderRadius: "3px",
-                width: "5px",
-              }}
-            />
-          )}
-          renderThumbVertical={(props) => (
-            <div
-              {...props}
-              style={{
-                backgroundColor: "#9797A6",
-              }}
-            />
-          )}
-        >
-         <div style={{paddingRight: "10px"}}><Question /></div> 
-        </Scrollbars>
+        <div className={styles.questionContainer}>
+          <Question />
+        </div>
 
         <div className={styles.codeEditor}>
-          <div className={styles.topContainer}>
-            <div>
-              <LanguagesDropdown onSelectChange={onSelectChange} />
-            </div>
-            <div>
-              <ThemeDropdown
-                handleThemeChange={handleThemeChange}
-                theme={theme}
-              />
-            </div>
-          </div>
-
           <CodeEditorWindow
             code={code}
             onChange={onChange}
             language={language?.name}
             theme={theme.value}
           />
-          <div className={styles.output}>
-            <div className={styles.outputWindow}>
-              <OutputWindow outputDetails={outputDetails} />
-            </div>
-            <div className={styles.customInput}>
-              <CustomInput
-                customInput={customInput}
-                setCustomInput={setCustomInput}
-              />{" "}
-            </div>
+        </div>
+
+        <div className={styles.outputWindow}>
+          <OutputWindow outputDetails={outputDetails} />
+          <div className={styles.customInput}>
+            
+            <CustomInput
+              customInput={customInput}
+              setCustomInput={setCustomInput}
+            />          </div>
             <button
-              style={{ position: "relative" }}
               onClick={handleCompile}
               disabled={!code}
               className={styles.handleCompile}
             >
-              {console.log(IsOutputDetailsVisible)}
               {processing ? "Processing..." : "Compile and Execute"}
-              {/* <div style={{position: 'absolute', top: '2px', right: '2px', color: 'red'}}><ImCross/></div> */}
             </button>
-            {outputDetails && IsOutputDetailsVisible && processing == false && (
-              <button
-                style={{
-                  marginRight: "0.5rem",
-                  color: "red",
-                  fontWeight: "700",
-                }}
-                onClick={hideOutputDetails}
-              >
-                Close
-              </button>
-            )}
-            {outputDetails && IsOutputDetailsVisible && processing == false && (
-              <OutputDetails
-                outputDetails={outputDetails}
-                Isanswer={Isanswer}
-                v={IsOutputDetailsVisible}
-              />
-            )}
-          </div>
+
+          {outputDetails && (
+            <OutputDetails outputDetails={outputDetails} Isanswer={Isanswer} />
+          )}
         </div>
       </div>
     </div>
   );
 };
-export default Landing;
+export default Compiler;

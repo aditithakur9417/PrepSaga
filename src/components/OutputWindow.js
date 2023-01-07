@@ -1,10 +1,19 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styles from "../../styles/Web/Landing.module.scss"
+import Landing from "./Landing";
+const OutputWindow = ({ outputDetails}) => {
 
-const OutputWindow = ({ outputDetails }) => {
+
+console.log(outputDetails)
+  var test;
   const getOutput = () => {
     let statusId = outputDetails?.status?.id;
+test=atob(outputDetails.stdout)
 
+useEffect(() => {
+  // <Landing outputValue="2"/>
+  // alert(outputDetails)
+}, [])
     if (statusId === 6) {
       // compilation error
       return (
@@ -13,6 +22,8 @@ const OutputWindow = ({ outputDetails }) => {
         </pre>
       );
     } else if (statusId === 3) {
+   
+      // alert(test)
       return (
         <pre className={styles.errorGreen}>
           {atob(outputDetails.stdout) !== null
@@ -34,6 +45,8 @@ const OutputWindow = ({ outputDetails }) => {
       );
     }
   };
+
+
   return (
     <>
 
@@ -43,6 +56,7 @@ const OutputWindow = ({ outputDetails }) => {
       </h1>
       <div className={styles.outputScreen}>
         {outputDetails ? <>{getOutput()}</> : null}
+       {console.log("test-"+test)}
       </div>
     </>
   );

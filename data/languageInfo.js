@@ -1,7 +1,7 @@
 export const languageInfo = {
   info: [
     {
-      title: "Google",
+      title: "JavaScript (Node.js 12.14.0)",
       about:
         "Founded by Larry Page and Sergey Brin in 1998, Google LLC is an American multinational technology company which specializes in services and products related to the Internet, for instance, cloud computing, online advertising technologies, a search engine, software, and hardware. Google is one of the Big Five companies in the United States Information Technology industry, along with Amazon, Apple, Microsoft, and Facebook.",
       interview_process: {

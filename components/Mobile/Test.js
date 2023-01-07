@@ -8,7 +8,7 @@ export default function Test(appdata){
 
     languageInfo.info.map((data, i) => {
         if (data.title == "Google") {
-          console.log(data.url);
+   
           appdata = data;
         }
       });

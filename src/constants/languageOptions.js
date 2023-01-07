@@ -18,36 +18,6 @@ export const languageOptions = [
     value: "bash",
   },
   {
-    id: 47,
-    name: "Basic (FBC 1.07.1)",
-    label: "Basic (FBC 1.07.1)",
-    value: "basic",
-  },
-  {
-    id: 75,
-    name: "C (Clang 7.0.1)",
-    label: "C (Clang 7.0.1)",
-    value: "c",
-  },
-  {
-    id: 76,
-    name: "C++ (Clang 7.0.1)",
-    label: "C++ (Clang 7.0.1)",
-    value: "cpp",
-  },
-  {
-    id: 48,
-    name: "C (GCC 7.4.0)",
-    label: "C (GCC 7.4.0)",
-    value: "c",
-  },
-  {
-    id: 52,
-    name: "C++ (GCC 7.4.0)",
-    label: "C++ (GCC 7.4.0)",
-    value: "cpp",
-  },
-  {
     id: 49,
     name: "C (GCC 8.3.0)",
     label: "C (GCC 8.3.0)",
@@ -90,34 +60,10 @@ export const languageOptions = [
     value: "cobol",
   },
   {
-    id: 55,
-    name: "Common Lisp (SBCL 2.0.0)",
-    label: "Common Lisp (SBCL 2.0.0)",
-    value: "lisp",
-  },
-  {
     id: 56,
     name: "D (DMD 2.089.1)",
     label: "D (DMD 2.089.1)",
     value: "d",
-  },
-  {
-    id: 57,
-    name: "Elixir (1.9.4)",
-    label: "Elixir (1.9.4)",
-    value: "elixir",
-  },
-  {
-    id: 58,
-    name: "Erlang (OTP 22.2)",
-    label: "Erlang (OTP 22.2)",
-    value: "erlang",
-  },
-  {
-    id: 44,
-    label: "Executable",
-    name: "Executable",
-    value: "exe",
   },
   {
     id: 87,
@@ -136,12 +82,6 @@ export const languageOptions = [
     name: "Go (1.13.5)",
     label: "Go (1.13.5)",
     value: "go",
-  },
-  {
-    id: 88,
-    name: "Groovy (3.0.3)",
-    label: "Groovy (3.0.3)",
-    value: "groovy",
   },
   {
     id: 61,
@@ -168,25 +108,6 @@ export const languageOptions = [
     label: "Lua (5.3.5)",
     value: "lua",
   },
-
-  {
-    id: 79,
-    name: "Objective-C (Clang 7.0.1)",
-    label: "Objective-C (Clang 7.0.1)",
-    value: "objectivec",
-  },
-  {
-    id: 65,
-    name: "OCaml (4.09.0)",
-    label: "OCaml (4.09.0)",
-    value: "ocaml",
-  },
-  {
-    id: 66,
-    name: "Octave (5.1.0)",
-    label: "Octave (5.1.0)",
-    value: "octave",
-  },
   {
     id: 67,
     name: "Pascal (FPC 3.0.4)",
@@ -206,22 +127,10 @@ export const languageOptions = [
     value: "php",
   },
   {
-    id: 43,
-    label: "Plain Text",
-    name: "Plain Text",
-    value: "text",
-  },
-  {
     id: 69,
     name: "Prolog (GNU Prolog 1.4.5)",
     label: "Prolog (GNU Prolog 1.4.5)",
     value: "prolog",
-  },
-  {
-    id: 70,
-    name: "Python (2.7.17)",
-    label: "Python (2.7.17)",
-    value: "python",
   },
   {
     id: 71,
@@ -264,17 +173,5 @@ export const languageOptions = [
     name: "Swift (5.2.3)",
     label: "Swift (5.2.3)",
     value: "swift",
-  },
-  {
-    id: 74,
-    name: "TypeScript (3.7.4)",
-    label: "TypeScript (3.7.4)",
-    value: "typescript",
-  },
-  {
-    id: 84,
-    name: "Visual Basic.Net (vbnc 0.0.0.5943)",
-    label: "Visual Basic.Net (vbnc 0.0.0.5943)",
-    value: "vbnet",
-  },
+  }
 ];

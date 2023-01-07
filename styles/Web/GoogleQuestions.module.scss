@@ -1,5 +1,5 @@
 .container {
-margin: auto 60px;
+margin: 20px 60px;
     div {
       line-height: 1.5rem;
     }
@@ -20,6 +20,7 @@ margin: auto 60px;
     border-width: thin;
     border-radius: 4px;
     margin: 20px;
+    // margin-bottom:30px;
     background: #fff;
   
     .problemButton {
@@ -45,6 +46,10 @@ margin: auto 60px;
       font-size: 0.9rem;
       font-weight: 400;
     }
+  }
+
+  .problem:last-child{
+margin-bottom: 0;
   }
   
   .textCenter {

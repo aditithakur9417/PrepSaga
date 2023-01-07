@@ -10,7 +10,7 @@ const Topnav = () => {
       setnavbar("block");
     } else setnavbar("none");
 
-    console.log(document.querySelector("body").scrollTop);
+
   };
 
   return (

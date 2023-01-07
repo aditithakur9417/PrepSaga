@@ -3,33 +3,47 @@ export const homeData = {
     {
       id: 1,
       type: "GoogleQuestions",
-      title: "Google Coding Questions",
+      title: "Google Repetitive Questions",
       list: [
         {
           title:"Gas Station",
           description:"Given two integer arrays A and B of size N. There are N gas stations along a circular route, where the amount of gas at station i...",
           url: "/gas_station",
-          content: "<h1>Gas Station</h1><br/> <h3>Problem Description</h3> Given two integer arrays A and B of size N. There are N gas stations along a circular route, where the amount of gas at station i is A[i]. <br/><br/> You have a car with an unlimited gas tank and it costs B[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. <br/><br/> Return the minimum starting gas station's index if you can travel around the circuit once, otherwise return -1. <br/><br/> You can only travel in one direction. i to i+1, i+2, ... n-1, 0, 1, 2.. Completing the circuit means starting at i and ending up at i again."
+          content: "<h1>Gas Station</h1><br/> <h3>Problem Description</h3> Given two integer arrays A and B of size N. There are N gas stations along a circular route, where the amount of gas at station i is A[i]. <br/><br/> You have a car with an unlimited gas tank and it costs B[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. <br/><br/> Return the minimum starting gas station's index if you can travel around the circuit once, otherwise return -1. <br/><br/> You can only travel in one direction. i to i+1, i+2, ... n-1, 0, 1, 2.. Completing the circuit means starting at i and ending up at i again.<br/><br/><h3>Problem Constraints</h3>1 <= |A| <= 5 * 10^5<br/>|A| == |B|<br/>0 <= Ai <= 5 * 103<br/>0 <= Bi <= 5 * 103<br/><br/><h3>Input Format</h3>The first argument given is the integer array A. The second argument given is the integer array B.<br/><br/><h3>Output Format</h3>Return the minimum starting gas station's index if you can travel around the circuit once, otherwise return -1.<br/><br/><h3>Example Input</h3>A = [1, 2]<br/>B = [2, 1]<br/><br/><h3>Example Output</h3>1<br/><br/><h3>Example Explanation</h3>If you start from index 0, you can fill in A[0] = 1 amount of gas.<br/>Now your tank has 1 unit of gas. But you need B[0] = 2 gas to travel to station 1.<br/><br/>If you start from index 1, you can fill in A[1] = 2 amount of gas.<br/>Now your tank has 2 units of gas. You need B[1] = 1 gas to get to station 0.<br/>So, you travel to station 0 and still have 1 unit of gas left over.<br/>You fill in A[0] = 1 unit of additional gas, making your current gas = 2. It costs you B[0] = 2 to get to station 1, which you do and complete the circuit.<br/><br/><br/><br/>",
+          input:2,
+          output:4
         },
         {
           title:"Majority Element",
           description:"Given an array of size n, find the majority element. The majority element is the element that appears more than floor(n/2) times. Yo...",
-          url: "/",
+          url: "/majority_element",
+          content: "<h1>Majority Element</h1> <br /> <h3>Problem Description</h3> Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.<br /><br /> <h3>Problem Constraints</h3> n == nums.length<br />1 <= n <= 5 * 10^4<br />-10^9 <= nums[i] <= 10^9<br /><br /> <h3>Example Input</h3> [2,2,1,1,1,2,2]]<br /><br /> <h3>Example Output</h3> 2<br /> <br />",
+          input:[2,2,1,1,1,2,2],
+          output:2
         },
         {
           title:"Max Rectangle in Binary Matrix",
           description:"Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing all ones and return its area. Bonus if you can solve it in O(n...",
-          url: "/",
+          url: "/max_rectangle",
+          content:"<h1>Max Rectangle in Binary Matrix</h1> <br /> <h3>Problem Description</h3> Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing all ones and return its area. Bonus if you can solve it in O(n^2) or less. <br /><br /> <h3>Problem Constraints</h3> rows == matrix.length<br />cols == matrix[i].length<br />1 <= row, cols <= 200<br />matrix[i][j] is '0' or '1'<br /><br /> <h3>Example Input</h3> matrix = [['1']] <br /><br /> <h3>Example Output</h3> 1<br /> <br />",
+          input:[["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]],
+          output:6
         },
         {
           title:"Distinct Subsequences",
           description:"Given two sequences A, B, count number of unique ways in sequence A, to form a subsequence that is identical to the sequence B. Subsequence : A subseq...",
-          url: "/",
+          url: "/distinct_subsequences",
+          content:"<h1>Majority Element</h1> <br /> <h3>Problem Description</h3> Given two sequences A, B, count number of unique ways in sequence A, to form a subsequence that is identical to the sequence B. <br /> Subsequence : A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, “ACE” is a subsequence of “ABCDE” while “AEC” is not). <br /><br /> <h3>Input Format:</h3> <br /> The first argument of input contains a string, A. The second argument of input contains a string, B. Output Format: <br /> Return an integer representing the answer as described in the problem statement.<br /><br /> <h3>Problem Constraints</h3> 1 <= length(A), length(B) <= 700<br /><br /> <h3>Example Input</h3> A = 'abc'<br /> B = 'abc'<br /><br /> <h3>Example Output</h3> 1<br /> <br />",
+          input:`A = "rabbbit"\nB = "rabbit"`,
+          output:2
         },
         {
           title:"Palindrome Partitioning II",
           description:"Given a string A, partition A such that every substring of the partition is a palindrome. Return the minimum cuts needed for a palindrome partitioning...",
-          url: "/",
+          url: "/palindrome_partitioning2",
+          content:"<h1>Majority Element</h1> <br /> <h3>Problem Description</h3> Given two sequences A, B, count number of unique ways in sequence A, to form a subsequence that is identical to the sequence B. <br /> Subsequence : A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, “ACE” is a subsequence of “ABCDE” while “AEC” is not). <br /><br /> <h3>Input Format:</h3> <br /> The first argument of input contains a string, A. The second argument of input contains a string, B. Output Format: <br /> Return an integer representing the answer as described in the problem statement.<br /><br /> <h3>Problem Constraints</h3> 1 <= length(A), length(B) <= 700<br /><br /> <h3>Example Input</h3> A = 'abc'<br /> B = 'abc'<br /><br /> <h3>Example Output</h3> 1<br /> <br />",
+          input:`A = "rabbbit"\nB = "rabbit"`,
+          output:2
         },
         {
           title:"Min Jumps Array",

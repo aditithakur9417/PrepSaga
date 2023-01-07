@@ -1,14 +1,32 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import styles from "../../styles/Web/Landing.module.scss"
 
-const OutputDetails = ({ outputDetails }) => {
+const OutputDetails = ({ outputDetails, Isanswer, v }) => {
+
+  var test=atob(outputDetails.stdout)
+  // if(test==4){
+  //   alert("condition called")
+  //   outputDetails?.status?.id=4;
+  // }
+
+
   return (
+ <>
+
+
     <div className={styles.outputDetails}>
+         {console.log(outputDetails)}
       <p>
-        Status:{" "}
-        <span>
+      Status:{" "}  
+        {Isanswer?<>   
+        <span style={{color:"#00D900"}}>
           {outputDetails?.status?.description}
-        </span>
+        </span></>
+        :
+        <span style={{color:"red"}}>
+          Wrong Answer
+          </span>}
+
       </p>
       <p>
         Memory:{" "}
@@ -23,6 +41,7 @@ const OutputDetails = ({ outputDetails }) => {
         </span>
       </p>
     </div>
+    </>
   );
 };
 

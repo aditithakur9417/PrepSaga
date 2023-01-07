@@ -7,7 +7,7 @@ const GoogleQuestionsM = (appdata) => {
 
     homeData.api_homeRevamp.map((data, i) => {
       if (data.type == "GoogleQuestions") {
-        console.log(data.url);
+   
         appdata = data;
       }
     });

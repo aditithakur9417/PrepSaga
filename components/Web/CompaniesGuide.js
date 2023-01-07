@@ -62,7 +62,7 @@ const CompaniesGuide = () => {
             </div>
             <div className={styles.cardFooter}>
            
-              <Link href="/Google">
+            <Link href="/Google">
                   <div className={styles.viewButton} href="/Google">
                     View Full Guide
                   </div>
@@ -95,18 +95,13 @@ const CompaniesGuide = () => {
               </ul>
             </div>
             <div className={styles.cardFooter}>
-              <a
-                href="/google-interview-questions/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
-              >
+
                 <Link href="/Amazon">
                   <div className={styles.viewButton} href="/Google">
                     View Full Guide
                   </div>
                 </Link>
-              </a>
+          
             </div>
           </div>
 
